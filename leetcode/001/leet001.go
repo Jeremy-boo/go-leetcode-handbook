@@ -13,11 +13,13 @@ import (
  * }
  */
 
+// ListNode 链表
 type ListNode struct {
 	Val int
 	Next *ListNode
 }
 
+// AddTwoNumbers 两数之和2
 func AddTwoNumbers(l1 *ListNode,l2 *ListNode) *ListNode {
 	// 取出第一个数的数据
 	arr1 := make([]int,0)
