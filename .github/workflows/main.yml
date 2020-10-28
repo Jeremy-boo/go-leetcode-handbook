@@ -3,8 +3,6 @@ name: Go-Leetcode-Handbook_CI
 on:
   push:
     branches: [ dev ]
-  pull_request:
-    branches: [ master ]
 
 jobs:
   lint:
@@ -44,4 +42,13 @@ jobs:
         with:
           token: ${{secrets.CODECOV_TOKEN}}
           file: ./coverage.txt
+  #merge:
+    #name: Auto Merge
+    #runs-on: ubuntu-latest
+    #steps:
+    #- name: Auto Merge
+      #uses: robotology/gh-action-nightly-merge@v1.2.0
+      #with:
+        #stable_branch: 'master'
+        #development_branch: 'dev'
 
