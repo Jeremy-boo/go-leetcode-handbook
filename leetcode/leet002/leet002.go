@@ -18,6 +18,8 @@ type ListNode struct {
 
 // AddTwoNumbers 两数相加
 func AddTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
+	l1 = reverseList(l1)
+	l2 = reverseList(l2)
 	var stack1 []interface{}
 	var stack2 []interface{}
 	// 取出链表中的值放入队列中
@@ -72,7 +74,7 @@ func AddTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 			insert(getSumVal(0,v2.(int)))
 		}
 	}
-	return sumL
+	return reverseList(sumL)
 }
 
 // pop 出栈
@@ -91,5 +93,15 @@ func push(slice []interface{},val interface{}) []interface{} {
 	newSlice[0] = val
 	copy(newSlice[1:],slice)
 	return newSlice
+}
+
+// reverseList 反转链表
+func reverseList(head *ListNode) *ListNode {
+	cur := head
+	var prev *ListNode = nil
+	for cur != nil {
+		prev,cur,cur.Next = cur,cur.Next,prev
+	}
+	return prev
 }
 

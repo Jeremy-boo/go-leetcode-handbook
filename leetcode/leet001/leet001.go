@@ -79,6 +79,7 @@ func AddTwoNumbers(l1 *ListNode,l2 *ListNode) *ListNode {
 	return sumL
 }
 
+// pop 出栈
 func pop(slice *[]interface{}) (value interface{},err error) {
 	if len(*slice)== 0{
 		return nil,errors.New("stack is empty")
@@ -88,6 +89,7 @@ func pop(slice *[]interface{}) (value interface{},err error) {
 	return value,nil
 }
 
+// push 进栈
 func push(slice []interface{},value interface{}) []interface{} {
 	newSlice := make([]interface{},len(slice)+1,len(slice)+1)
 	newSlice[0] = value
@@ -95,12 +97,3 @@ func push(slice []interface{},value interface{}) []interface{} {
 	return newSlice
 }
 
-
-func reverseList(head *ListNode) *ListNode {
-	cur := head
-	var pre *ListNode = nil
-	for cur != nil {
-		pre,cur,cur.Next = cur,cur.Next,pre
-	}
-	return pre
-}
