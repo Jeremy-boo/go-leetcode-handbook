@@ -1,4 +1,4 @@
-package _01
+package leet001
 
 import (
 	"fmt"
