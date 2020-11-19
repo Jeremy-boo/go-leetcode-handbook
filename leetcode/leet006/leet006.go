@@ -1,10 +1,10 @@
 package leet006
 
+// ClimbStairs 爬楼梯
 // n=1   1
 // n=2   2
 // n=3   3
 // n=4   即 f(n) = f(n-1)+ f(n-2)
-// ClimbStairs 爬楼梯
 func ClimbStairs(n int) int {
 	if n <= 2 {
 		return n
