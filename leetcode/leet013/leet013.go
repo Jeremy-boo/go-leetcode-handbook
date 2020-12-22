@@ -19,7 +19,6 @@ func dividePow(r float64, n int) float64 {
 	// 下探到下一层
 	if n%2 == 0 {
 		return y * y
-	} else {
-		return y * y * r
 	}
+	return y * y * r
 }
