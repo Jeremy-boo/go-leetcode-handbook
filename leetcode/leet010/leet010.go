@@ -1,4 +1,4 @@
-package leetcode010
+package leet010
 
 func GenerateParenthesis(n int) []string {
 	arrS := make([]string, 0)
