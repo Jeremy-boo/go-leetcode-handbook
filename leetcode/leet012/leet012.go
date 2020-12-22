@@ -9,10 +9,12 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
+// isValidBST 验证二叉搜索树
 func isValidBST(root *TreeNode) bool {
 	return isValidRecu(root, math.MinInt64, math.MaxInt64)
 }
 
+// isValidRecu 递归验证
 func isValidRecu(root *TreeNode, low int, upper int) bool {
 	// 边界条件
 	if root == nil {

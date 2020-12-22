@@ -7,6 +7,7 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
+// invertTree 翻转二叉树
 func invertTree(root *TreeNode) *TreeNode {
 	// 递归终止条件
 	if root == nil {

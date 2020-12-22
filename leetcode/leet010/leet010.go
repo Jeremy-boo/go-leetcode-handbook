@@ -1,5 +1,6 @@
 package leet010
 
+// GenerateParenthesis 括号生成
 func GenerateParenthesis(n int) []string {
 	arrS := make([]string, 0)
 	_generate(0, 0, n, "", &arrS)

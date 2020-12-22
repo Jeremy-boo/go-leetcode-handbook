@@ -1,5 +1,6 @@
 package leet013
 
+// myPow 求x的n次方
 func myPow(x float64, n int) float64 {
 	if n >= 0 {
 		return dividePow(x, n)
@@ -7,6 +8,7 @@ func myPow(x float64, n int) float64 {
 	return 1.0 / dividePow(x, n)
 }
 
+// dividePow 分治法
 func dividePow(r float64, n int) float64 {
 	// 终止条件
 	if n == 0 {
