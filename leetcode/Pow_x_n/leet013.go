@@ -1,4 +1,4 @@
-package Pow_x__n_
+package Pow_x_n
 
 // myPow 求x的n次方
 func myPow(x float64, n int) float64 {

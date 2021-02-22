@@ -1,4 +1,4 @@
-package 两数相加_2_
+package 两数相加_2
 
 import (
 	"errors"
