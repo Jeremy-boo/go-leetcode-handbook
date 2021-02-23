@@ -24,16 +24,18 @@ func reverseBetween(head *ListNode, m int, n int) *ListNode {
 	for i := 1; i <= m-1; i++ {
 		preM = preM.Next
 	}
-	// 反转m节点到n节点之间的链表
+
 	var linkedList *ListNode
+	// m 节点
 	cur := preM.Next
+	// 反转m节点到n节点之间的链表
 	for j := m; j <= n; j++ {
 		linkedList, cur, cur.Next = cur, cur.Next, linkedList
 	}
 
 	// preM.Next为m节点，原始m节点应该指向n+1节点
 	preM.Next.Next = cur
+	// 执行m-> n 的反转节点
 	preM.Next = linkedList
-
 	return cacheNode.Next
 }
