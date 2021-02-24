@@ -11,7 +11,7 @@ func TestAddTwoNumbers(t *testing.T) {
 		Next: &ListNode{
 			Val: 4,
 			Next: &ListNode{
-				Val:  3,
+				Val:  9,
 				Next: nil,
 			},
 		},
@@ -21,8 +21,11 @@ func TestAddTwoNumbers(t *testing.T) {
 		Next: &ListNode{
 			Val: 6,
 			Next: &ListNode{
-				Val:  4,
-				Next: nil,
+				Val: 4,
+				Next: &ListNode{
+					Val:  9,
+					Next: nil,
+				},
 			},
 		},
 	}

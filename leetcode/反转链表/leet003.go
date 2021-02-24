@@ -47,3 +47,18 @@ func ReverseList2(head *ListNode) *ListNode {
 	head = mid
 	return head
 }
+
+// ReverseList3 采用递归方式
+func ReverseList3(head *ListNode) *ListNode {
+	// 终止条件
+	if head == nil || head.Next == nil {
+		return head
+	}
+	head.Next.Next = head
+	head.Next = nil
+	// 处理当前层逻辑
+	newHead := ReverseList3(head.Next)
+	// 下探到下一层
+	// 清理当前层
+	return newHead
+}
