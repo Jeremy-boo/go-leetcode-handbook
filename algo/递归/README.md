@@ -1,0 +1,28 @@
+## 递归(Recursion)
+
+> 递归的本质就是循环(通过函数本体进行的循环)
+
+### 递归的特点
+### 递归模板
+~~~
+func recursion(level,param1,param2,...) {
+    // 1. 递归终止条件 recursion terminator
+    if level > maxLevel {
+        process_result
+        return
+    }
+    // 2. 处理当前层逻辑 process login in current level
+    process(level,data...)
+    
+    // 3. 下探到下一层  drill down
+    recursion(level+1,p1,...)
+    
+    // 4. 清理当前层 reverse the current level status if needed
+}
+~~~
+
+### 思维要点
+
+- 不要进行人肉递归
+- 找到最近最简方法，将其拆解成可重复解决的问题（重复子问题）
+- 数学归纳法思维 （当n成立的时候，推导n+1 也成立）
